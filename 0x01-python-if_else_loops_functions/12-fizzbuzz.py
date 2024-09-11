@@ -1,4 +1,6 @@
-def fizz_buzz():
+#!/usr/bin/python3
+
+def fizzbuzz():
     for n in range(1, 101):
         if n % 3 == 0 and n % 5 == 0:
             print("FizzBuzz", end=" ")
@@ -8,4 +10,4 @@ def fizz_buzz():
             print("Buzz", end=" ")
         else:
             print(n, end=" ")
-fizz_buzz()
+fizzbuzz()
