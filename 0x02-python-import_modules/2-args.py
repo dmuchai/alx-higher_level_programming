@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
+    """print the no. and value of CLD"""
     import sys
 
     count_args = len(sys.argv) - 1
