@@ -10,5 +10,5 @@ if __name__ == "__main__":
         print(sum)
     else:
         for n in range(1, len(argv)):
-            sum += int (argv[n])
+            sum += int(argv[n])
         print(sum)
