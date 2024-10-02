@@ -3,7 +3,11 @@
 
 
 class Square:
-    """a class Square that defines a square.
+    """
+    a class Square that defines a square.
+
+    Attributes:
+        size: size of a square (1 side).
     """
     def __init__(self, size=0):
         """Creates new instances of square.
@@ -21,7 +25,7 @@ class Square:
 
     def area(self):
         """Calculates the area of square.
-                
-        Returns: the square area.
+
+        Returns: the current square area.
         """
         return self.__size ** 2
