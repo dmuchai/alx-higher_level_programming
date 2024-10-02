@@ -75,7 +75,7 @@ class Square:
         if value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-    
+
     def my_print(self):
         """prints to stdout the square with the # character
         """
