@@ -4,7 +4,7 @@
 
 class Square:
     """
-    Class that defines properties of square by: (based on 4-square.py).
+    Class that defines properties of square by: (based on 5-square.py).
 
     Attributes:
         size: size of a square (1 side).
@@ -14,7 +14,7 @@ class Square:
 
         Args:
             __size: size of the square (1 side).
-            __position: position of the square
+            __position: position of the square.
         """
         self.size = size
         self.position = position
@@ -34,25 +34,24 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Property setter for size.
+        """Property setter for size of square.
 
         Args:
-            value (int): size of a square's side (1 side).
+            value (int): size of a square (1 side).
 
         Raises:
-            TypeError: size must be an integer
-            ValueError: size must be >= 0
+            TypeError: size must be an integer.
+            ValueError: size must be >= 0.
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
-    
+        self.__size = value
+
     @property
     def position(self):
-        """Returns the position of the square as a tuple of 2 positive int.
+        """Returns the position of the square as a tuple of 2 positiove int.
         """
         return self.__position
 
