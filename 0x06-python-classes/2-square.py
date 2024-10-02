@@ -12,8 +12,6 @@ class Square:
             size: size of the square (1 side).
         """
 
-        self.__size = size
-
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
