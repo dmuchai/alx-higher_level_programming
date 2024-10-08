@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""A class that restricts dynamic attribute creation.""
+"""A class that restricts dynamic attribute creation."""
 
 
 class LockedClass:
