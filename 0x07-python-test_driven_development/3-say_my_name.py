@@ -4,7 +4,7 @@ Module that prints a certain first name and last name.
 """
 
 
-def say_my_name(first_name, last_name=""):
+def say_my_name(first_name="", last_name=""):
     """Prints a string with <first_name>
     and <last_name>.
     """
