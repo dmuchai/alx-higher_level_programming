@@ -7,6 +7,7 @@ class Rectangle:
     """A class that defines a rectangle's area and perimeter"""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
