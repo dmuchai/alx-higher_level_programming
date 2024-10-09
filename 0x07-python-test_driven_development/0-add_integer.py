@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 This is the addition module.
-it adds 2 integersba and b must be first casted
+it adds 2 integers a and b must be first casted
 returns integer sum
 """
 
@@ -9,7 +9,7 @@ returns integer sum
 def add_integer(a, b=98):
     """
     Returns the addition of two integers a and b.
-    
+
     Raises:
         TypeError: If either of a or b is a not an integer or float.
     """
