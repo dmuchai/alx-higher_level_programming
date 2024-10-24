@@ -82,6 +82,44 @@ class TestRectangleClass(unittest.TestCase):
         r = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(str(r), "[Rectangle] (12) 2/1 - 4/6")
 
+    def test_rectangle_init(self):
+        """Test initializing Rectangle with valid inputs"""
+        r = Rectangle(1, 2)
+        self.assertEqual(r.width, 1)
+        self.assertEqual(r.height, 2)
+
+    def test_invalid_width(self):
+        """Test invalid width types"""
+        with self.assertRaises(TypeError):
+            Rectangle("1", 2)
+
+    def test_invalid_height(self):
+        """Test invalid height types"""
+        with self.assertRaises(TypeError):
+            Rectangle(1, "2")
+
+    def test_area(self):
+        """Test area calculation"""
+        r = Rectangle(4, 5)
+        self.assertEqual(r.area(), 20)
+
+    def test_str_method(self):
+        """Test __str__ method output"""
+        r = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(str(r), "[Rectangle] (12) 2/1 - 4/6")
+
+    def test_update_args(self):
+        """Test update with *args"""
+        r = Rectangle(10, 10, 10, 10)
+        r.update(89, 1, 2, 3, 4)
+        self.assertEqual(str(r), "[Rectangle] (89) 3/4 - 1/2")
+
+    def test_update_kwargs(self):
+        """Test update with **kwargs"""
+        r = Rectangle(10, 10, 10, 10)
+        r.update(id=89, width=1, height=2, x=3, y=4)
+        self.assertEqual(str(r), "[Rectangle] (89) 3/4 - 1/2")
+
 
 if __name__ == "__main__":
     unittest.main()
