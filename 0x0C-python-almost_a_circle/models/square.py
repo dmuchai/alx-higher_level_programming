@@ -3,6 +3,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """Represents a Square, inheriting from Rectangle."""
 
@@ -18,8 +19,10 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """Return the string representation of the Square instance."""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        """Returns string representation of the Square instance."""
+        return "[Square] ({}) {}/{} - {}".format(
+                self.id, self.x, self.y, self.width
+        )
 
     @property
     def size(self):
