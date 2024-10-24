@@ -2,11 +2,11 @@
 """ Module for testing Base class functionality """
 
 import unittest
+import os
 from models.base import Base
 from models.square import Square
 from models.rectangle import Rectangle
 from io import StringIO
-from unittest import TestCase
 from unittest.mock import patch
 
 
@@ -60,6 +60,33 @@ class TestBaseClass(unittest.TestCase):
         instance = Base()
         with self.assertRaises(AttributeError):
             instance.__nb_objects
+
+    def test_to_json_string_none(self):
+        """ Test converting None to JSON string """
+        self.assertEqual(Base.to_json_string(None), "[]")
+
+    def test_to_json_string_empty(self):
+        """ Test converting an empty list to JSON string """
+        self.assertEqual(Base.to_json_string([]), "[]")
+
+    def test_to_json_string_valid(self):
+        """ Test converting a valid list of dictionaries to JSON string """
+        dict_list = [{'id': 12}]
+        self.assertEqual(Base.to_json_string(dict_list), '[{"id": 12}]')
+
+    # Tests for from_json_string
+    def test_from_json_string_none(self):
+        """ Test converting None from JSON string """
+        self.assertEqual(Base.from_json_string(None), [])
+
+    def test_from_json_string_empty(self):
+        """ Test converting an empty JSON string """
+        self.assertEqual(Base.from_json_string("[]"), [])
+
+    def test_from_json_string_valid(self):
+        """ Test converting a valid JSON string to list of dictionaries """
+        json_str = '[{"id": 89}]'
+        self.assertEqual(Base.from_json_string(json_str), [{"id": 89}])
 
     def test_save_to_file_with_none(self):
         """ Test saving None to a JSON file """
