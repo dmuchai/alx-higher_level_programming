@@ -34,3 +34,21 @@ class Square(Rectangle):
         """Set the size of the square, affecting both width and height."""
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """Update the attributes of the Square instance.
+
+        Args:
+            *args (tuple): Non-keyword arguments in the order:
+                1st: id, 2nd: size, 3rd: x, 4th: y.
+            **kwargs (dict): Keyword arguments to update attributes.
+        """
+        if args and len(args) > 0:
+            attr_names = ["id", "size", "x", "y"]
+            for i, value in enumerate(args):
+                if i < len(attr_names):
+                    setattr(self, attr_names[i], value)
+        elif kwargs:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
