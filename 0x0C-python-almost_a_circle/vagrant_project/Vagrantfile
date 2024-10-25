@@ -1,0 +1,4 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64" # You can choose another box if you prefer
+  config.ssh.forward_x11 = true
+end

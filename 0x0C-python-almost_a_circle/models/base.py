@@ -160,6 +160,12 @@ class Base:
             draw_shape(rect.x, rect.y, rect.width, rect.height, color="blue")
 
         for square in list_squares:
-            draw_shape(square.x, square.y, square.size, square.size, color="green")
+            draw_shape(
+                square.x,
+                square.y,
+                square.size,
+                square.size,
+                color="green"
+            )
 
         turtle.done()
