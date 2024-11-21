@@ -6,7 +6,10 @@ ALTER DATABASE `hbtn_0c_0` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE `hbtn_0c_0`.`first_table`
     CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
--- Change the character set and collation of the 'name' field
+-- Modify the 'id' column to explicitly use int(11)
 ALTER TABLE `hbtn_0c_0`.`first_table`
-    MODIFY `name` VARCHAR(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+    MODIFY `id` int(11) DEFAULT NULL;
 
+-- Modify the 'name' column to explicitly use utf8mb4 with utf8mb4_unicode_ci collation
+ALTER TABLE `hbtn_0c_0`.`first_table`
+    MODIFY `name` VARCHAR(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL;
