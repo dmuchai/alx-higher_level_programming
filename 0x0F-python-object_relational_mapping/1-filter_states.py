@@ -3,6 +3,7 @@
 import MySQLdb
 from sys import argv
 
+
 def main():
     # Connect to the MySQL database
     db = MySQLdb.connect(
@@ -17,7 +18,9 @@ def main():
     cursor = db.cursor()
 
     # SQL query to select states starting with 'N'
-    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC;")
+    cursor.execute(
+            "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC;"
+            )
 
     # Fetch and print all results
     rows = cursor.fetchall()
@@ -27,6 +30,7 @@ def main():
     # Close the cursor and connection
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     main()
