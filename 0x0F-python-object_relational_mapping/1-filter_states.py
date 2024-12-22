@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""a script that lists all states with a name starting with N"""
 import MySQLdb
 from sys import argv
 
