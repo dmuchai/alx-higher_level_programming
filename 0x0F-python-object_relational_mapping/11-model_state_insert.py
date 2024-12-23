@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """Adds the State object 'Louisiana' to the database."""
 import sys
 from sqlalchemy import create_engine
