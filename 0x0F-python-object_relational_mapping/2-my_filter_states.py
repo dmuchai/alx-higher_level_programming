@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""a script that filters states by user input"""
 import MySQLdb
 from sys import argv
 
