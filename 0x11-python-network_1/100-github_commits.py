@@ -21,6 +21,9 @@ if __name__ == "__main__":
                 author = commit.get("commit", {}).get("author", {}).get("name")
                 print(f"{sha}: {author}")
         else:
-            print(f"Error: Unable to fetch commits (status code: {response.status_code})")
+            print(
+                    f"Error: Unable to fetch commits "
+                    f"(status code: {response.status_code})"
+            )
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
